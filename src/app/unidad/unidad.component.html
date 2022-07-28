@@ -1,0 +1,12 @@
+<h2>Unidades</h2>
+<ul class="unidades">
+    <li *ngFor="let unidad of unidades">
+        
+        <a routerLink="/detail/{{unidad.idUnidad}}">
+            <span class="badge">{{unidad.idUnidad}}</span> {{unidad.nombre}}
+          </a>
+    </li>
+  </ul>
+  <input id="name" [(ngModel)]="nombre" placeholder="nombre"><button type="button" (click)="addUnidad()">Agregar</button>
+  <p *ngIf="mensajeError">{{mensajeError}}</p>
+  <h2>Fin unidades</h2>

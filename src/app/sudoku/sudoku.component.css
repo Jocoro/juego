@@ -1,0 +1,14 @@
+mat-grid-list{
+    margin : -5% 35% auto
+    
+}
+mat-grid-tile{
+    margin : 4px
+}
+.valores{
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+@keyframes transicionBlanco {
+    100% {background-color: white;}
+  }

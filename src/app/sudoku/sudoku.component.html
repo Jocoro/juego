@@ -1,0 +1,28 @@
+
+<mat-grid-list cols="9" rowHeight="1:1" class="valores">
+  <mat-grid-tile 
+      *ngFor="let valor of valores"
+      [style.background]="valor.color" 
+      [style.border]="'2px solid black'"
+      
+      (click)="selectValue(valor)">
+    {{valor.text}}
+   
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list  cols="9" rowHeight="1:1" #sudoku>
+    <mat-grid-tile 
+        *ngFor="let tile of tiles"
+        [id]="tile.posicion"
+        [matBadge]="tile.text" matBadgeHidden="true" matBadgePosition="before"
+        [style.background]="tile.seleccionada ? 'unset' : tile.color" 
+        [style.border]="tile.seleccionada ? '2px solid black':'2px solid white'"
+        [style.z-index]="tile.seleccionada ? 1:0"
+        (click)="selectTile(tile)"
+        
+        
+        >
+      {{tile.text}}
+     
+    </mat-grid-tile>
+  </mat-grid-list>
